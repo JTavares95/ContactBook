@@ -5,6 +5,10 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
+import org.example.exception.handler.ExceptionHandler;
+import org.example.exception.handler.IllegalArgumentExceptionHandler;
+import org.example.exception.handler.IllegalJsonPropertyExceptionHandler;
+import org.example.exception.handler.ResourceNotFoundExceptionHandler;
 import org.example.resources.ContactResource;
 import org.example.resources.HelloWorldResource;
 
@@ -17,6 +21,11 @@ public class ContactsBookApplication extends Application {
     public ContactsBookApplication() {
         classes.add(HelloWorldResource.class);
         classes.add(ContactResource.class);
+
+        classes.add(ExceptionHandler.class);
+        classes.add(ResourceNotFoundExceptionHandler.class);
+        classes.add(IllegalJsonPropertyExceptionHandler.class);
+        classes.add(IllegalArgumentExceptionHandler.class);
     }
 
     @Override
