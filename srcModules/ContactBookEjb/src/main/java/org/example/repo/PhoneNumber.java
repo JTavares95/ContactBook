@@ -27,7 +27,7 @@ public class PhoneNumber {
     private String number;
 
     @JsonIgnore
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "CONTACT_ID")
     private Contact contact;
 

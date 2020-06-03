@@ -28,23 +28,6 @@
     </dependency>
   </dependencies>
 
-<!--  <build>-->
-<!--    <finalName>${project.artifactId}</finalName>-->
-<!--    <plugins>-->
-<!--      <plugin>-->
-<!--        <artifactId>maven-ear-plugin</artifactId>-->
-<!--        <version>3.0.2</version>-->
-<!--        <groupId>org.apache.maven.plugins</groupId>-->
-<!--        <configuration>-->
-<!--          <archive>-->
-<!--            <manifest>-->
-<!--              <addClasspath>true</addClasspath>-->
-<!--            </manifest>-->
-<!--          </archive>-->
-<!--        </configuration>-->
-<!--      </plugin>-->
-<!--    </plugins>-->
-<!--  </build>-->
   <build>
     <plugins>
       <plugin>

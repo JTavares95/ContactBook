@@ -36,11 +36,6 @@
       <!-- Internal modules dependecies-->
       <dependency>
         <groupId>org.example</groupId>
-        <artifactId>ContactBookCommon</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.example</groupId>
         <artifactId>ContactBookEjb</artifactId>
         <version>${project.version}</version>
         <type>ejb</type>
