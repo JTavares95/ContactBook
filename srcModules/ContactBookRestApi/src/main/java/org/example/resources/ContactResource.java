@@ -21,6 +21,8 @@ import org.example.api.ContactServiceInterface;
 import org.example.dto.ContactDto;
 import org.example.dto.ContactMapper;
 import org.example.dto.PhoneNumberDto;
+import org.example.exception.IllegalJsonPropertyException;
+import org.example.exception.ResourceNotFoundException;
 import org.example.repo.Contact;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -44,14 +46,14 @@ public class ContactResource {
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response get(@PathParam("id") Long id) {
+    public Response get(@PathParam("id") Long id) throws ResourceNotFoundException {
         return Response.status(HttpStatus.SC_OK).entity(ContactMapper.toDto(contactService.getContactById(id))).build();
     }
 
     @DELETE
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response delete(@PathParam(value = "id") Long id) {
+    public Response delete(@PathParam(value = "id") Long id) throws ResourceNotFoundException {
         contactService.deleteContactById(id);
         return Response.status(HttpStatus.SC_NO_CONTENT).build();
     }
@@ -59,7 +61,7 @@ public class ContactResource {
 
     @POST
     @Produces(MediaType.APPLICATION_JSON)
-    public Response create(ContactDto contactDto) {
+    public Response create(ContactDto contactDto) throws IllegalJsonPropertyException {
         Contact contact = ContactMapper.fromDto(contactDto);
         return Response.status(HttpStatus.SC_CREATED).entity(ContactMapper.toDto(contactService.create(contact))).build();
     }
@@ -68,7 +70,7 @@ public class ContactResource {
     @PUT
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response update(@PathParam(value = "id") Long id, ContactDto contactDto) {
+    public Response update(@PathParam(value = "id") Long id, ContactDto contactDto) throws ResourceNotFoundException, IllegalJsonPropertyException {
         contactDto.setId(id);
         Contact contact = ContactMapper.fromDto(contactDto);
         return Response.status(HttpStatus.SC_OK).entity(ContactMapper.toDto(contactService.updateContact(contact))).build();
