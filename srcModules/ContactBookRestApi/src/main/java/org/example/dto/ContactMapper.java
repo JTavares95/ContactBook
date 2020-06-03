@@ -5,6 +5,9 @@ import java.util.stream.Collectors;
 import org.example.repo.Contact;
 import org.modelmapper.ModelMapper;
 
+/**
+ * This mapper is responsible to convert the REST object (DTO) into the object used in the service layer
+ */
 public class ContactMapper {
 
     private static final ModelMapper MODEL_MAPPER = new ModelMapper();
