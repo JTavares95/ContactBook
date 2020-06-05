@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+
+<suite name="My First TestNG test">
+  <test name="Parameter Test">
+    <classes>
+      <class name="org.example.test.TestSuit">
+        <parameter name="jndi-name" value="myEarName/ContactBookEjb/EJB_TESTE!org.example.api.ContactServiceInterfaceRemote"/>
+      </class>
+
+    </classes>
+  </test>
+
+</suite>

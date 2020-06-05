@@ -1,6 +1,7 @@
 package org.example.repo;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.io.Serializable;
 import java.util.Objects;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -14,7 +15,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="phone_number", schema = "public")
-public class PhoneNumber {
+public class PhoneNumber implements Serializable {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)

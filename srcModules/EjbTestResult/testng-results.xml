@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="10" passed="10">
+  <reporter-output>
+  </reporter-output>
+  <suite name="My First TestNG test" duration-ms="2423" started-at="2020-06-05T01:36:24 BST" finished-at="2020-06-05T01:36:26 BST">
+    <groups>
+      <group name="create-contact">
+        <method signature="TestSuit.createContact()[pri:0, instance:org.example.test.TestSuit@5f341870]" name="createContact" class="org.example.test.TestSuit"/>
+        <method signature="TestSuit.createContactEmptyName()[pri:0, instance:org.example.test.TestSuit@5f341870]" name="createContactEmptyName" class="org.example.test.TestSuit"/>
+        <method signature="TestSuit.createContactInvalidNameSize()[pri:0, instance:org.example.test.TestSuit@5f341870]" name="createContactInvalidNameSize" class="org.example.test.TestSuit"/>
+        <method signature="TestSuit.createContactWithoutAddress()[pri:0, instance:org.example.test.TestSuit@5f341870]" name="createContactWithoutAddress" class="org.example.test.TestSuit"/>
+        <method signature="TestSuit.createContactWithoutName()[pri:0, instance:org.example.test.TestSuit@5f341870]" name="createContactWithoutName" class="org.example.test.TestSuit"/>
+      </group> <!-- create-contact -->
+      <group name="get-contact">
+        <method signature="TestSuit.getAllContacts()[pri:0, instance:org.example.test.TestSuit@5f341870]" name="getAllContacts" class="org.example.test.TestSuit"/>
+        <method signature="TestSuit.getContactById()[pri:0, instance:org.example.test.TestSuit@5f341870]" name="getContactById" class="org.example.test.TestSuit"/>
+        <method signature="TestSuit.getMissingContact()[pri:0, instance:org.example.test.TestSuit@5f341870]" name="getMissingContact" class="org.example.test.TestSuit"/>
+      </group> <!-- get-contact -->
+      <group name="update-contact">
+        <method signature="TestSuit.updateContact()[pri:0, instance:org.example.test.TestSuit@5f341870]" name="updateContact" class="org.example.test.TestSuit"/>
+        <method signature="TestSuit.updateContactNumber()[pri:0, instance:org.example.test.TestSuit@5f341870]" name="updateContactNumber" class="org.example.test.TestSuit"/>
+      </group> <!-- update-contact -->
+    </groups>
+    <test name="Parameter Test" duration-ms="2423" started-at="2020-06-05T01:36:24 BST" finished-at="2020-06-05T01:36:26 BST">
+      <class name="org.example.test.TestSuit">
+        <test-method status="PASS" signature="init(java.lang.String)[pri:0, instance:org.example.test.TestSuit@5f341870]" name="init" is-config="true" duration-ms="920" started-at="2020-06-05T01:36:24 BST" finished-at="2020-06-05T01:36:25 BST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[myEarName/ContactBookEjb/EJB_TESTE!org.example.api.ContactServiceInterfaceRemote]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="createContact()[pri:0, instance:org.example.test.TestSuit@5f341870]" name="createContact" duration-ms="515" started-at="2020-06-05T01:36:25 BST" finished-at="2020-06-05T01:36:25 BST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContact -->
+        <test-method status="PASS" signature="createContactEmptyName()[pri:0, instance:org.example.test.TestSuit@5f341870]" name="createContactEmptyName" duration-ms="19" started-at="2020-06-05T01:36:25 BST" finished-at="2020-06-05T01:36:25 BST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContactEmptyName -->
+        <test-method status="PASS" signature="createContactInvalidNameSize()[pri:0, instance:org.example.test.TestSuit@5f341870]" name="createContactInvalidNameSize" duration-ms="10" started-at="2020-06-05T01:36:25 BST" finished-at="2020-06-05T01:36:25 BST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContactInvalidNameSize -->
+        <test-method status="PASS" signature="createContactWithoutAddress()[pri:0, instance:org.example.test.TestSuit@5f341870]" name="createContactWithoutAddress" duration-ms="7" started-at="2020-06-05T01:36:25 BST" finished-at="2020-06-05T01:36:25 BST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContactWithoutAddress -->
+        <test-method status="PASS" signature="createContactWithoutName()[pri:0, instance:org.example.test.TestSuit@5f341870]" name="createContactWithoutName" duration-ms="8" started-at="2020-06-05T01:36:25 BST" finished-at="2020-06-05T01:36:25 BST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContactWithoutName -->
+        <test-method status="PASS" signature="updateContact()[pri:0, instance:org.example.test.TestSuit@5f341870]" name="updateContact" duration-ms="238" started-at="2020-06-05T01:36:25 BST" finished-at="2020-06-05T01:36:26 BST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateContact -->
+        <test-method status="PASS" signature="updateContactNumber()[pri:0, instance:org.example.test.TestSuit@5f341870]" name="updateContactNumber" duration-ms="245" started-at="2020-06-05T01:36:26 BST" finished-at="2020-06-05T01:36:26 BST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateContactNumber -->
+        <test-method status="PASS" signature="getAllContacts()[pri:0, instance:org.example.test.TestSuit@5f341870]" name="getAllContacts" duration-ms="131" depends-on-groups="create.*" started-at="2020-06-05T01:36:26 BST" finished-at="2020-06-05T01:36:26 BST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllContacts -->
+        <test-method status="PASS" signature="getContactById()[pri:0, instance:org.example.test.TestSuit@5f341870]" name="getContactById" duration-ms="205" depends-on-groups="create.*" started-at="2020-06-05T01:36:26 BST" finished-at="2020-06-05T01:36:26 BST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getContactById -->
+        <test-method status="PASS" signature="getMissingContact()[pri:0, instance:org.example.test.TestSuit@5f341870]" name="getMissingContact" duration-ms="82" depends-on-groups="create.*" started-at="2020-06-05T01:36:26 BST" finished-at="2020-06-05T01:36:26 BST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getMissingContact -->
+      </class> <!-- org.example.test.TestSuit -->
+    </test> <!-- Parameter Test -->
+  </suite> <!-- My First TestNG test -->
+</testng-results>

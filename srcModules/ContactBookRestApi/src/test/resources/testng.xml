@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+
+<suite name="My First TestNG test">
+  <test name="Parameter Test">
+    <classes>
+      <class name="org.example.test.RestTestSuit">
+        <parameter name="base-url" value="http://localhost:8080/contactbook/rest/contact"/>
+      </class>
+
+    </classes>
+  </test>
+
+</suite>

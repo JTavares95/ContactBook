@@ -1,10 +1,12 @@
 package org.example.repo;
 
+import java.io.Serializable;
 import java.util.Objects;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -13,7 +15,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="contact", schema = "public")
-public class Contact {
+public class Contact implements Serializable {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -25,7 +27,7 @@ public class Contact {
     @Column(name = "ADDRESS")
     private String address;
 
-    @OneToMany(mappedBy = "contact", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "contact", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<PhoneNumber> phoneNumbers;
 
     public Contact() {

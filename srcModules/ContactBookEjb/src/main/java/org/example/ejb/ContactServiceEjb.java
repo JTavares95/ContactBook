@@ -6,14 +6,15 @@ import java.util.Set;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import org.example.api.ContactServiceInterface;
+import org.example.api.ContactServiceInterfaceRemote;
 import org.example.api.ContactServiceJpaInterface;
 import org.example.exception.IllegalJsonPropertyException;
 import org.example.exception.ResourceNotFoundException;
 import org.example.repo.Contact;
 import org.example.repo.PhoneNumber;
 
-@Stateless
-public class ContactServiceEjb implements ContactServiceInterface {
+@Stateless(mappedName = "MY_EJB", name = "EJB_TESTE")
+public class ContactServiceEjb implements ContactServiceInterface, ContactServiceInterfaceRemote {
 
     public static final int STRING_MAX_SIZE = 255;
     public static final int STRING_MIN_SIZE = 0;

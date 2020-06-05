@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [My First TestNG test]">
+  <parameter name="" value=""/>
+  <test thread-count="5" name="Parameter Test(failed)">
+    <classes>
+      <class name="org.example.test.EjbTestSuit">
+        <parameter name="jndi-name" value="java:global/myEarName/ContactBookEjb/EJB_TESTE!org.example.api.ContactServiceInterface"/>
+        <methods>
+          <include name="createContactWithoutAddress"/>
+          <include name="createContactInvalidNameSize"/>
+          <include name="init"/>
+          <include name="createContactWithoutName"/>
+          <include name="getContactById"/>
+          <include name="getMissingContact"/>
+          <include name="updateContactNumber"/>
+          <include name="createContactEmptyName"/>
+          <include name="updateContact"/>
+          <include name="createContact"/>
+          <include name="getAllContacts"/>
+        </methods>
+      </class> <!-- org.example.test.EjbTestSuit -->
+    </classes>
+  </test> <!-- Parameter Test(failed) -->
+</suite> <!-- Failed suite [My First TestNG test] -->
