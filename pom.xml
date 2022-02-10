@@ -27,7 +27,7 @@
     <!-- DataBase-->
     <ojdbc8.version>19.6.0.0</ojdbc8.version>
     <postgresql.version>42.2.2</postgresql.version>
-    <hibernate.version>4.1.4.Final</hibernate.version>
+    <hibernate.version>5.4.24.Final</hibernate.version>
     <hibernate.jpa.version>1.0.2.Final</hibernate.jpa.version>
   </properties>
 
